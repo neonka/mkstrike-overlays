@@ -8,4 +8,5 @@ Free SimHub iRacing overlays.
 
 If you want to support this work, you can buy me "coffee" :) All the support is appreciated.
 
+### Installation
 
