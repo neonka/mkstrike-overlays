@@ -30,8 +30,8 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 ### PIT limiter/info *(work in progress)*
 
 ## Installation process
-1. Install [Simhub](https://www.simhubdash.com/download-2/)
-2. Install [Roboto font](https://fonts.google.com/specimen/Roboto) is required.
+1. Install [Simhub](https://www.simhubdash.com/download-2/).
+2. Install [Roboto font family](https://fonts.google.com/specimen/Roboto)..
 3. Download **RSC.iRacingExtraProperties.dll** and **RSC.iRacingExtraProperties.pdb** from the Official Google Drive and copy them into your Simhub root folder. Restart Simhub, and then in Simhub > Add/Remove features enable the Plugin:
   - ![image](https://github.com/user-attachments/assets/10727663-6a37-4082-9f11-a5ade77a78b7)
 4. Download and install overlay of your choosing here: **TODO: add link to release version**
