@@ -40,4 +40,4 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 4. Download and install overlay of your choosing here: [Latest version](https://github.com/neonka/mkstrike-overlays/releases).
 5. Setup your overlay layout in SimHub.
 
-*If you experience any issue or inconsistency, do not hesitate to report it as issue and I will properly address it.*
+*If you experience any issue or inconsistency, do not hesitate to report it as [issue](https://github.com/neonka/mkstrike-overlays/issues/new) and I will properly address it.*
