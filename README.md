@@ -17,12 +17,15 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 > Currently in BETA. Please excuse any mistakes, which will be fixed.
 
 ### Standings overlay
-![standings](https://github.com/user-attachments/assets/1044fe37-c175-4c24-828c-24db4562c6a2)
+![standings2_smugged](https://github.com/user-attachments/assets/b1d4a1a2-c547-42c7-89bd-98a4251b9439)
+
 
 ### Relative overlay
-![relative](https://github.com/user-attachments/assets/ce096cec-cca5-46d3-9ef4-2a592ef7f785)
+![relative2_smugged](https://github.com/user-attachments/assets/71da97c2-88bd-417a-85cd-41d1f4ca0b85)
 
-*Another feature: can display Black flag, Green flag, Checkered flag, Yellow flag.*
+*Another feature: can display Black flag, Green flag, Checkered flag, Yellow flag. **Example:*** 
+
+![relative2_flag_smugged](https://github.com/user-attachments/assets/4257bedc-c877-41fe-801f-9b0386a4feff)
 
 ### Radar *(alpha)*
 ![image](https://github.com/user-attachments/assets/b69ba699-bbdf-4216-bb81-a5cf2de31f9a)
