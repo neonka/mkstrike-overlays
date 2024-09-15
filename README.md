@@ -41,3 +41,6 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 5. Setup your overlay layout in SimHub.
 
 *If you experience any issue or inconsistency, do not hesitate to report it as [issue](https://github.com/neonka/mkstrike-overlays/issues/new) and I will properly address it.*
+
+## Future plans
+...
