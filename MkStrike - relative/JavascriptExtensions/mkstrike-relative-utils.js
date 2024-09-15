@@ -1,3 +1,7 @@
+function mk_BorderBlinkSpeedMs() {
+    return 400;
+}
+
 function mk_getRowHeight() {
     return 25;
 }
@@ -187,7 +191,7 @@ function mk_getCarImageName(carName) {
         return 'Honda';
     if (carName.startsWith('Lamborghini'))
         return 'Lamborghini';
-    if (carName.startsWith('McLaren'))
+    if (carName.startsWith('McLaren') || carName.startsWith('Mclaren'))
         return 'Mclaren';
     if (carName.startsWith('Mercedes'))
         return 'Mercedes';
