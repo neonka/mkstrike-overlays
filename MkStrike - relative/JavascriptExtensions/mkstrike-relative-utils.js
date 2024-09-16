@@ -30,6 +30,13 @@ function mk_getBackgroundCarModel() {
     return '#FFF0F8FF';
 }
 
+function mk_getSuccessColor() {
+    return '#009615';
+}
+
+function mk_getAlertColor() {
+    return '#D50019';
+}
 
 function mk_NumberToTwoDigitString(number) {
     if (number < 10) {
@@ -290,5 +297,42 @@ function mk_getRoadWetnessTextColor() {
             return '#4FAEE3';
         }
     }
+    return 'white';
+}
+
+function mk_getCarRowTextColor() {
+    const color_sameLap = '#FFFFFF';
+    const color_ahead = '#FF7400';
+    const color_behind = '#00BFFF';
+
+    if ($prop('variable.isPlayer')) {
+        return '#FFFFE04C';
+    }
+
+    if ($prop('DataCorePlugin.GameData.SessionTypeName') == 'Race') {
+        const direction = $prop('variable.direction');
+        const driverIndex = mk_NumberToTwoDigitString(+$prop('variable.driverIndex'));
+
+        const lapDifference = +$prop('IRacingExtraProperties.iRacing_Driver' + direction + '_' + driverIndex + '_LapDifference');
+
+        if (lapDifference) {
+            if (lapDifference > 0.6) {
+                return color_behind;
+            } else if (lapDifference < -0.6) {
+                return color_ahead;
+            }
+            return color_sameLap;
+        }
+
+    } else {
+        return color_sameLap;
+    }
+}
+
+function mk_footerFuelBackgroundColor() {
+    return '#FF262626';
+}
+
+function mk_footerFuelTextColor() {
     return 'white';
 }
