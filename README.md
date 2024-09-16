@@ -21,11 +21,11 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 
 
 ### Relative overlay
-![relative2_smugged](https://github.com/user-attachments/assets/71da97c2-88bd-417a-85cd-41d1f4ca0b85)
+![relative3_smugged](https://github.com/user-attachments/assets/85c7b9f4-ebbd-4291-9005-81d005dd8ab3)
 
 *Another feature: can display Black flag, Green flag, Checkered flag, Yellow flag. **Example:*** 
 
-![relative2_flag_smugged](https://github.com/user-attachments/assets/4257bedc-c877-41fe-801f-9b0386a4feff)
+![relative3_flag_smugged](https://github.com/user-attachments/assets/58c41d87-9003-4c74-b419-8c63c4d1362a)
 
 ### Radar *(alpha)*
 ![image](https://github.com/user-attachments/assets/b69ba699-bbdf-4216-bb81-a5cf2de31f9a)
