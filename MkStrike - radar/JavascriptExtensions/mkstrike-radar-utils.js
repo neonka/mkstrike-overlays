@@ -105,7 +105,7 @@ function mk_isVersionAlertVisible() {
 	if (root['block'])
 		return false;
 
-	const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/1-init/versions.json');
+	const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/main/versions.json');
 
 	if (jsonStr) {
 		const json = JSON.parse(jsonStr);
