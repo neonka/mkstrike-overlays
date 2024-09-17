@@ -5,7 +5,7 @@ Free SimHub iRacing overlays.
 I think simulation game such as iRacing should support overlays like this without paying monthly subscriptions to third party apps.
 
 ## Support
-If you want to support this work, you can buy me "coffee" here https://ko-fi.com/neonkadeveloper. All the support is appreciated.
+If you want to support this work, you can buy me "coffee": https://ko-fi.com/neonkadeveloper. All the support is appreciated.
 
 ## List of overlays:
 - Standings *(supports multi class races)*
