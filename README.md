@@ -19,7 +19,7 @@ If you want to support this work, you can buy me "coffee": https://ko-fi.com/neo
 ![standings2_smugged](https://github.com/user-attachments/assets/b1d4a1a2-c547-42c7-89bd-98a4251b9439)
 
 
-### Overlay List
+### Relative overlay
 ![relative3_smugged](https://github.com/user-attachments/assets/85c7b9f4-ebbd-4291-9005-81d005dd8ab3)
 
 *Another feature: can display Black flag, Green flag, Checkered flag, Yellow flag. **Example:*** 
