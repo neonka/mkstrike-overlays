@@ -1,3 +1,19 @@
+function mk_getActualVersion() {
+	return '1.0.0';
+}
+
+function mk_DefaultBlinkSpeedMs() {
+	return 400;
+}
+
+function mk_getSuccessColor() {
+	return '#009615';
+}
+
+function mk_getAlertColor() {
+	return '#D50019';
+}
+
 function mk_isPlayerTextColor() {
 	return '#FFFFE04C';
 }
@@ -241,4 +257,29 @@ function mk_urlAnalytics(message) {
 	const completeUrl = url + query;
 	log(completeUrl);
 	return completeUrl;
+}
+
+function mk_isVersionAlertVisible() {
+	if (root['block'])
+		return false;
+
+	const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/1-init/versions.json');
+
+	if (jsonStr) {
+		const json = JSON.parse(jsonStr);
+		if (json.standings != $prop('variable.version')) {
+			let start;
+			if (!root['stamp']) {
+				root['stamp'] = Date.now();
+			}
+			start = root['stamp'];
+			const curr = Date.now();
+			if (((curr - start) / 1000) < 6)
+				return true;
+		} else {
+			root['block'] = true;
+		}
+	}
+
+	return false;
 }
