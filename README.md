@@ -29,8 +29,6 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 ### Radar *(alpha)*
 ![image](https://github.com/user-attachments/assets/b69ba699-bbdf-4216-bb81-a5cf2de31f9a)
 
-### PIT limiter/info *(work in progress)*
-
 ## Installation process
 1. Install [Simhub](https://www.simhubdash.com/download-2/).
 2. Install [Roboto font family](https://fonts.google.com/specimen/Roboto).
