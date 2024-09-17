@@ -8,13 +8,12 @@ I think simulation game such as iRacing should support overlays like this withou
 If you want to support this work, you can buy me "coffee" here https://ko-fi.com/neonkadeveloper. All the support is appreciated.
 
 ## List of overlays:
-- Standings *(supports multiple class races)*
-- Relatives *(supports multiple class races)*
+- Standings *(supports multi class races)*
+- Relatives *(supports multi class races)*
 - Radar
-- PIT stop limiter/info
 
 > [!WARNING]
-> Currently in BETA. Please excuse any mistakes, which will be fixed.
+> Currently in BETA. Please excuse any mistakes... :)
 
 ### Standings overlay
 ![standings2_smugged](https://github.com/user-attachments/assets/b1d4a1a2-c547-42c7-89bd-98a4251b9439)
@@ -43,4 +42,5 @@ If you want to support this work, you can buy me "coffee" here https://ko-fi.com
 *If you experience any issue or inconsistency, do not hesitate to report it as [issue](https://github.com/neonka/mkstrike-overlays/issues/new) and I will properly address it.*
 
 ## Future plans
-...
+- Current delta (including sectors)
+- Pit stop limiter/info
