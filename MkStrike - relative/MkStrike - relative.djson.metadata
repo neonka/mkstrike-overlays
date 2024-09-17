@@ -1,0 +1,22 @@
+{
+  "SimHubVersion": "9.4.4",
+  "Category": null,
+  "Title": "MkStrike - relative",
+  "Description": null,
+  "Author": "Petr Procházka",
+  "ScreenCount": 1.0,
+  "InGameScreensIndexs": [
+    0
+  ],
+  "IdleScreensIndexs": [
+    0
+  ],
+  "MainPreviewIndex": 0,
+  "IsOverlay": true,
+  "Width": 540.0,
+  "Height": 330.0,
+  "OverlaySizeWarning": false,
+  "MetadataVersion": 2.0,
+  "EnableOnDashboardMessaging": true,
+  "PitScreensIndexs": []
+}
