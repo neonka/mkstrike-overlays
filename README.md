@@ -1,5 +1,4 @@
-# mkstrike-overlays
-Free SimHub iRacing overlays. 
+![mkstrike-overlays-banner](https://github.com/user-attachments/assets/fabb9b90-38b7-4984-ae3d-e0a0b7597ccb)
 
 ## Motivation
 I think simulation game such as iRacing should support overlays like this without paying monthly subscriptions to third party apps.
