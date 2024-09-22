@@ -1,49 +1,5 @@
-function mk_getActualVersion() {
-    return '1.1.0';
-}
-
-function mk_DefaultBlinkSpeedMs() {
-    return 400;
-}
-
-function mk_BorderBlinkSpeedMs() {
-    return 400;
-}
-
-function mk_getRowHeight() {
-    return 25;
-}
-
-function mk_getBadgeHeight() {
-    return 18;
-}
-
-function mk_getCarFontSize() {
-    return 15;
-}
-
 function mk_getHeaderFontSize() {
     return 15;
-}
-
-function mk_getBackground1() {
-    return '#C8000000';
-}
-
-function mk_getBackground2() {
-    return '#C80F0F0F';
-}
-
-function mk_getBackgroundCarModel() {
-    return '#FFF0F8FF';
-}
-
-function mk_getSuccessColor() {
-    return '#009615';
-}
-
-function mk_getAlertColor() {
-    return '#D50019';
 }
 
 function mk_NumberToTwoDigitString(number) {
@@ -164,89 +120,10 @@ function mk_getSRBackgroundColor() {
         const driverIndex = mk_NumberToTwoDigitString(+$prop('variable.driverIndex'));
         licence = $prop('IRacingExtraProperties.iRacing_Driver' + direction + '_' + driverIndex + '_SafetyRating');
     }
-    // R - #D50019
-    // D - #F45C10
-    // C - #FBD800
-    // B - #85CD00
-    // A - #00ABE0
-    if (licence.startsWith('R')) {
-        return '#D50019';
-    } else if (licence.startsWith('D')) {
-        return '#F45C10';
-    } else if (licence.startsWith('C')) {
-        return '#FBD800';
-    } else if (licence.startsWith('B')) {
-        return '#85CD00';
-    } else if (licence.startsWith('A')) {
-        return '#006FCB';
-    }
+    return mk_getSRBackgroundColorImpl(licence);
 }
 
-function mk_getCarImageName(carName) {
-    if (!carName || carName === '')
-        return carName;
-
-    if (carName.startsWith('Ferrari'))
-        return 'Ferrari';
-    if (carName.startsWith('Acura'))
-        return 'Acura';
-    if (carName.startsWith('Dallara'))
-        return 'Dalara';
-    if (carName.startsWith('Audi'))
-        return 'Audi';
-    if (carName.startsWith('BMW'))
-        return 'BMW';
-    if (carName.startsWith('Chevrolet'))
-        return 'Chevrolet';
-    if (carName.startsWith('Corvette'))
-        return 'Chevrolet';
-    if (carName.startsWith('Ford'))
-        return 'Ford';
-    if (carName.startsWith('Honda'))
-        return 'Honda';
-    if (carName.startsWith('Lamborghini'))
-        return 'Lamborghini';
-    if (carName.startsWith('McLaren') || carName.startsWith('Mclaren'))
-        return 'Mclaren';
-    if (carName.startsWith('Mercedes'))
-        return 'Mercedes';
-    if (carName.startsWith('Porsche'))
-        return 'Porsche';
-    if (carName.startsWith('Toyota'))
-        return 'Toyota';
-    if (carName.startsWith('Radical'))
-        return 'Radical';
-    if (carName.startsWith('Mazda') || carName.startsWith('MX-5'))
-        return 'Mazda';
-    if (carName.startsWith('Aston Martin'))
-        return 'Aston Martin';
-    if (carName.startsWith('Subaru'))
-        return 'Subaru';
-    if (carName.startsWith('Nissan'))
-        return 'Nissan';
-    if (carName.startsWith('Porsche'))
-        return 'Porsche';
-    if (carName.startsWith('Lotus'))
-        return 'Lotus';
-    if (carName.startsWith('Kia'))
-        return 'Kia';
-    if (carName.startsWith('Cadillac'))
-        return 'Cadillac';
-    if (carName.startsWith('VW') || carName.startsWith('Volkswagen'))
-        return 'Volkswagen';
-    if (carName.startsWith('Pontiac'))
-        return 'Pontiac';
-    if (carName.startsWith('Renault'))
-        return 'Renault';
-    if (carName.startsWith('Ray'))
-        return 'Ray';
-    if (carName.startsWith('Lexus'))
-        return 'Lexus';
-    log('Relative, missing: ' + carName);
-
-    return carName;
-}
-
+// TODO: refactor to base
 function mk_getTyreBackground() {
     const tireCompoundColor = $prop('IRacingExtraProperties.iRacing_Player_TireCompoundColor');
     const tireCompound = $prop('IRacingExtraProperties.iRacing_Player_TireCompound');
@@ -257,6 +134,7 @@ function mk_getTyreBackground() {
     return tireCompoundColor;
 }
 
+// TODO: refactor to base
 function mk_getTyreTextColor() {
     const tireCompoundColor = $prop('IRacingExtraProperties.iRacing_Player_TireCompoundColor');
     const tireCompound = $prop('IRacingExtraProperties.iRacing_Player_TireCompound');
@@ -267,6 +145,7 @@ function mk_getTyreTextColor() {
     return 'black';
 }
 
+// TODO: refactor to base
 function mk_getTyreText() {
     const tireCompound = $prop('IRacingExtraProperties.iRacing_Player_TireCompound');
     if (tireCompound == 'M')
@@ -315,7 +194,7 @@ function mk_getCarRowTextColor() {
     const color_behind = '#00BFFF';
 
     if ($prop('variable.isPlayer')) {
-        return '#FFFFE04C';
+        return mk_getPlayerTextColor();
     }
 
     if ($prop('DataCorePlugin.GameData.SessionTypeName') == 'Race') {
@@ -344,29 +223,4 @@ function mk_footerFuelBackgroundColor() {
 
 function mk_footerFuelTextColor() {
     return 'white';
-}
-
-function mk_isVersionAlertVisible() {
-    if (root['block'])
-        return false;
-
-    const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/5-v110/versions.json');
-
-    if (jsonStr) {
-        const json = JSON.parse(jsonStr);
-        if (json.relative != $prop('variable.version')) {
-            let start;
-            if (!root['stamp']) {
-                root['stamp'] = Date.now();
-            }
-            start = root['stamp'];
-            const curr = Date.now();
-            if (((curr - start) / 1000) < 6)
-                return true;
-        } else {
-            root['block'] = true;
-        }
-    }
-
-    return false;
 }
