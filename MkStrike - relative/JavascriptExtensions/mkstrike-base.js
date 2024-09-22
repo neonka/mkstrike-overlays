@@ -6,11 +6,11 @@ function mk_getBranchName() {
     return '5-v110';
 }
 
-function mk_IsIRacing() {
+function mk_isIRacing() {
     return $prop('DataCorePlugin.CurrentGame') == 'IRacing';
 }
 
-function mk_IsACC() {
+function mk_isACC() {
     return $prop('DataCorePlugin.CurrentGame') == 'AssettoCorsaCompetizione';
 }
 
@@ -119,6 +119,11 @@ function mk_getCarImageName(carName) {
         return 'Ray';
     if (carName.startsWith('Lexus'))
         return 'Lexus';
+    if (carName.startsWith('Maserati'))
+        return 'Maserati';
+    if (carName.startsWith('Bentley'))
+        return 'Bentley';
+
     log('Relative, missing: ' + carName);
 
     return carName;
