@@ -1,5 +1,5 @@
 function mk_getActualVersion() {
-	return '1.0.0';
+	return '1.1.0';
 }
 
 function mk_DefaultBlinkSpeedMs() {
@@ -200,7 +200,8 @@ function mk_getCarImageName(carName) {
 		return 'Renault';
 	if (carName.startsWith('Ray'))
 		return 'Ray';
-
+	if (carName.startsWith('Lexus'))
+		return 'Lexus';
 	log('Relative, missing: ' + carName);
 
 	return carName;
@@ -263,7 +264,7 @@ function mk_isVersionAlertVisible() {
 	if (root['block'])
 		return false;
 
-	const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/main/versions.json');
+	const jsonStr = downloadstringasync(500, 'https://raw.githubusercontent.com/neonka/mkstrike-overlays/5-v110/versions.json');
 
 	if (jsonStr) {
 		const json = JSON.parse(jsonStr);
