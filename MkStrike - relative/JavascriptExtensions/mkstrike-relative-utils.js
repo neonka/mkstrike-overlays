@@ -581,7 +581,7 @@ function mk_ACC_get_car_CupCategoryBackgroundColor() {
 function mk_get_Footer_FuelLaps() {
     let laps;
     if (mk_isIRacing()) {
-        let laps = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');
+        laps = $prop('DataCorePlugin.Computed.Fuel_RemainingLaps');
         if (laps) {
             laps = parseFloat(laps).toFixed(1);
         }
