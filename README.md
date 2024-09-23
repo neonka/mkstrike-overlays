@@ -6,6 +6,12 @@ I think simulation game such as iRacing should support overlays like this withou
 ## Support
 If you want to support this work, you can buy me "coffee": https://ko-fi.com/neonkadeveloper. All the support is appreciated.
 
+## Future plans
+- ACC support
+- Current delta (including sectors)
+- Pit stop limiter/info
+- Bug fixing
+
 ## List of overlays:
 - Standings *(supports multi class races)*
 - Relatives *(supports multi class races)*
@@ -38,6 +44,3 @@ If you want to support this work, you can buy me "coffee": https://ko-fi.com/neo
 
 *If you experience any issue or inconsistency, do not hesitate to report it as [issue](https://github.com/neonka/mkstrike-overlays/issues/new) and I will properly address it.*
 
-## Future plans
-- Current delta (including sectors)
-- Pit stop limiter/info
