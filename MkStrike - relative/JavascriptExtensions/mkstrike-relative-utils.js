@@ -542,6 +542,24 @@ function mk_ACC_get_Car_DriverCategoryBackgroundColor() {
     return mk_ACC_getDriverCategoryBadgeColor(realtimeCarUpdate);
 }
 
+function mk_ACC_get_Car_DriverCategoryTextColor() {
+    const direction = $prop('variable.direction');
+    const driverIndex = +$prop('variable.driverIndex');
+
+    let position;
+    if ($prop('variable.isPlayer')) {
+        position = $prop('DataCorePlugin.GameData.Position');
+    } else {
+        let driverIndex1 = driverIndex + 1; // ACC driver index is 1-based, iRacing is 0-based
+        if (direction == 'AHead') {
+            driverIndex1 *= -1;
+        }
+        position = getopponentleaderboardposition_aheadbehind(driverIndex1);
+    }
+    const realtimeCarUpdate = mk_ACC_getRealtimeCarUpdateByLivePosition(position);
+    return mk_ACC_getDriverCategoryBadgeTextColor(realtimeCarUpdate);
+}
+
 function mk_ACC_get_Car_CupCategory() {
     const direction = $prop('variable.direction');
     const driverIndex = +$prop('variable.driverIndex');
@@ -576,6 +594,24 @@ function mk_ACC_get_car_CupCategoryBackgroundColor() {
     }
     const realtimeCarUpdate = mk_ACC_getRealtimeCarUpdateByLivePosition(position);
     return mk_ACC_getCarCupCategoryBadgeColor(realtimeCarUpdate);
+}
+
+function mk_ACC_get_car_CupCategoryBadgeTextColor() {
+    const direction = $prop('variable.direction');
+    const driverIndex = +$prop('variable.driverIndex');
+
+    let position;
+    if ($prop('variable.isPlayer')) {
+        position = $prop('DataCorePlugin.GameData.Position');
+    } else {
+        let driverIndex1 = driverIndex + 1; // ACC driver index is 1-based, iRacing is 0-based
+        if (direction == 'AHead') {
+            driverIndex1 *= -1;
+        }
+        position = getopponentleaderboardposition_aheadbehind(driverIndex1);
+    }
+    const realtimeCarUpdate = mk_ACC_getRealtimeCarUpdateByLivePosition(position);
+    return mk_ACC_getCarCupCategoryBadgeTextColor(realtimeCarUpdate);
 }
 
 function mk_get_Footer_FuelLaps() {

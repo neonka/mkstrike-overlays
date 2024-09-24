@@ -39,7 +39,7 @@ function mk_getPlayerTextColor() {
 }
 
 function mk_getSuccessColor() {
-    return '#009615';
+    return '#81D540';
 }
 
 function mk_getAlertColor() {
