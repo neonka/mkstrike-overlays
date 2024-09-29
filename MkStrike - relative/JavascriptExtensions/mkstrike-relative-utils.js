@@ -171,7 +171,9 @@ function mk_getWeatherPrecipitation() {
                 return (parseFloat(precipitation) * 100).toFixed(0) + '%';
             }
         }
+        return '0%';
     }
+
     return '-';
 }
 
