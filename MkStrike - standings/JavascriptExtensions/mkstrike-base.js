@@ -1,5 +1,5 @@
 function mk_getActualVersion() {
-    return '1.1.0';
+    return '1.1.0-alpha';
 }
 
 function mk_getBranchName() {
