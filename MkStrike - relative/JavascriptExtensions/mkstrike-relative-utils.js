@@ -98,6 +98,14 @@ function mk_getFlagText() {
     return '';
 }
 
+function mk_FlagBorderBlinkSpeed() {
+    if ($prop('Flag_White')) {
+        return mk_BorderBlinkSpeedMs() * 2;
+    } else {
+        return mk_BorderBlinkSpeedMs();
+    }
+}
+
 function mk_IsFlagBorderVisible() {
     return $prop('Flag_Black') || mk_isBlackFlag() || $prop('Flag_Blue') || $prop('Flag_Green') || $prop('Flag_Checkered') || $prop('Flag_White') || $prop('Flag_Yellow');
 }
@@ -154,6 +162,36 @@ function mk_getTyreText() {
     return tireCompound;
 }
 
+function mk_getWeatherPrecipitation() {
+    if (mk_isIRacing()) {
+        const rawData = NewRawData();
+        if (rawData.Telemetry) {
+            const precipitation = rawData.Telemetry["Precipitation"];
+            if (precipitation) {
+                return (parseFloat(precipitation) * 100).toFixed(0) + '%';
+            }
+        }
+    }
+    return '-';
+}
+
+function mk_getWeatherPrecipitationTextColor() {
+    if (mk_isIRacing()) {
+        const rawData = NewRawData();
+        if (rawData.Telemetry) {
+            const precipitation = rawData.Telemetry["Precipitation"];
+            if (precipitation) {
+                if (precipitation >= 0.5) {
+                    return '#0065C3'
+                }
+                if (precipitation >= 0.3) {
+                    return '#4FAEE3';
+                }
+            }
+        }
+    }
+}
+
 function mk_getRoadWetness() {
     if (mk_isIRacing()) {
         const rawData = NewRawData();
@@ -162,15 +200,15 @@ function mk_getRoadWetness() {
             if (w == 1) {
                 return 'Dry';
             } else if (w == 2) {
-                return 'Mostly dry';
+                return 'Very light'; //'Mostly dry';
             } else if (w == 3) {
-                return 'Light wet'; //Very light wet, Very damp track
+                return 'Light';//'Light wet'; //Very light wet, Very damp track
             } else if (w == 4) {
-                return 'Wet track';
+                return 'Moderate'; //'Wet track';
             } else if (w == 5) {
-                return 'Very wet track';
+                return 'Heavy';//'Very wet track';
             } else if (w == 6) {
-                return 'Waterlogged track';
+                return 'Very heavy';//'Waterlogged track';
             }
             return 'R: ' + w;
         }
